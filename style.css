@@ -118,6 +118,10 @@ section:last-child {
     object-fit: cover;
 }
 
+.visitor-map {
+    margin-top: 64px;
+}
+
 @media (max-width: 520px) {
     main {
         width: min(100% - 28px, 720px);
