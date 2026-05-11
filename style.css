@@ -6,15 +6,25 @@ body {
     margin: 0;
     background: #ffffff;
     color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
+    font-family: Lato, Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-main {
-    width: min(720px, calc(100% - 40px));
+a {
+    color: #1772d0;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #f09228;
+}
+
+.page {
+    width: min(1000px, calc(100% - 32px));
     margin: 0 auto;
-    padding: 72px 0 96px;
+    padding: 34px 0 70px;
 }
 
 h1,
@@ -25,83 +35,122 @@ p {
 }
 
 h1 {
-    margin-bottom: 32px;
-    font-size: 28px;
-    line-height: 1.2;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.1;
     font-weight: 400;
 }
 
 h2 {
-    margin: 64px 0 24px;
-    font-size: 24px;
-    line-height: 1.2;
+    margin: 38px 0 18px;
+    font-size: 25px;
+    line-height: 1.25;
     font-weight: 400;
 }
 
 h3 {
     margin-bottom: 4px;
-    font-size: 16px;
-    line-height: 1.45;
-    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
 }
 
 p {
-    margin-bottom: 22px;
+    margin-bottom: 12px;
 }
 
-a {
-    color: #111111;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 34px;
+    align-items: center;
+    padding: 12px 20px 26px;
 }
 
-a:hover {
-    color: #777777;
+.hero-copy {
+    max-width: 680px;
 }
 
-.intro {
-    margin-bottom: 72px;
-}
-
-.email {
-    margin-top: 36px;
-    margin-bottom: 10px;
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 .links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    margin-top: 26px;
-}
-
-.links span {
-    display: none;
+    margin-top: 20px;
 }
 
 .links a {
-    padding: 6px 12px;
-    border: 1px solid #111111;
+    padding: 5px 11px;
+    border: 1px solid #1772d0;
     border-radius: 999px;
-    text-decoration: none;
-    line-height: 1.3;
+    line-height: 1.25;
 }
 
 .links a:hover {
-    background: #111111;
-    color: #ffffff;
+    border-color: #f09228;
 }
 
-.item {
-    margin-bottom: 34px;
+.news-list,
+.plain-list {
+    margin-top: 0;
+    padding-left: 22px;
 }
 
-.item p {
-    margin-bottom: 4px;
+.news-list li,
+.plain-list li {
+    margin-bottom: 8px;
 }
 
-section:last-child {
-    margin-top: 8px;
+.news-list span {
+    color: #d00000;
+    font-weight: 700;
+}
+
+.focus-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.focus-list p {
+    margin: 0;
+    padding: 14px;
+    border: 1px solid #e8e8e8;
+    background: #fafafa;
+    font-weight: 700;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    gap: 26px;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 105px;
+    object-fit: contain;
+}
+
+.meta {
+    color: #666666;
+    margin-bottom: 6px;
 }
 
 .photo-grid {
@@ -119,21 +168,48 @@ section:last-child {
 }
 
 .visitor-map {
-    margin-top: 64px;
+    margin-top: 40px;
+}
+
+@media (max-width: 760px) {
+    h1 {
+        text-align: left;
+        font-size: 38px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .profile-photo {
+        max-width: 260px;
+        grid-row: 1;
+    }
+
+    .links {
+        justify-content: flex-start;
+    }
+
+    .focus-list,
+    .experience {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        max-width: 170px;
+    }
 }
 
 @media (max-width: 520px) {
-    main {
-        width: min(100% - 28px, 720px);
-        padding-top: 48px;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        margin-top: 52px;
+    .page {
+        width: min(100% - 28px, 1000px);
+        padding-top: 26px;
     }
 
     .photo-grid {
