@@ -103,7 +103,10 @@ p {
     padding-left: 22px;
 }
 
-.news-list li,
+.news-list li {
+    margin-bottom: 8px;
+}
+
 .plain-list li {
     margin-bottom: 8px;
 }
