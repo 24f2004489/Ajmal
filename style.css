@@ -111,6 +111,19 @@ p {
     margin-bottom: 8px;
 }
 
+.publication-meta {
+    margin-top: 3px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.publication-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
 .news-list span {
     color: #d00000;
     font-weight: 700;
