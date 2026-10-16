@@ -165,13 +165,6 @@ p {
     object-fit: contain;
 }
 
-.logo-name {
-    max-width: 100%;
-    color: #555555;
-    font-weight: 700;
-    text-align: center;
-}
-
 .meta {
     color: #666666;
     margin-bottom: 6px;
@@ -251,10 +244,6 @@ p {
 
     .logo img {
         max-width: 170px;
-    }
-
-    .logo-name {
-        text-align: left;
     }
 }
 
